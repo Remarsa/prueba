@@ -1,9 +1,10 @@
-/* Variables de colores */
+/* Variables */
 :root {
-    --primary-color: #0047ab;
-    --secondary-color: #159151;
-    --background-color: #ffffff;
-    --text-color: #333333;
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --text-color: #333;
+    --light-bg: #f3f4f6;
+    --white: #ffffff;
 }
 
 /* Estilos generales */
@@ -25,7 +26,7 @@ body {
     padding: 0 20px;
 }
 
-/* Barra de navegación */
+/* Navegación */
 .navbar {
     background-color: var(--primary-color);
     padding: 1rem 0;
@@ -42,54 +43,72 @@ body {
 }
 
 .logo {
-    color: white;
+    color: var(--white);
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-.nav-links {
+.nav-menu {
     display: flex;
     list-style: none;
+    gap: 2rem;
 }
 
-.nav-links a {
-    color: white;
+.nav-menu a {
+    color: var(--white);
     text-decoration: none;
     padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
-    color: var(--secondary-color);
+.nav-menu a:hover,
+.nav-menu a.active {
+    background-color: var(--secondary-color);
 }
 
-/* Sección hero */
+/* Hero Section */
 .hero {
-    padding: 8rem 0 4rem;
-    background-color: #f5f5f5;
+    padding: 8rem 2rem 4rem;
+    background-color: var(--light-bg);
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
-/* Sección de contenido */
-.content {
+/* Features Section */
+.features {
     padding: 4rem 0;
 }
 
-/* Formulario de contacto */
-.contact-section {
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.feature-card {
+    padding: 2rem;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Contact Section */
+.contact {
     padding: 8rem 0 4rem;
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 2rem auto;
+.contact-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+    margin-top: 2rem;
 }
 
 .form-group {
@@ -115,22 +134,33 @@ body {
 
 .btn {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--white);
     padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
 }
 
 .btn:hover {
     background-color: var(--secondary-color);
 }
 
-/* Pie de página */
+/* Footer */
 footer {
-    background-color: var(--primary-color);
-    color: white;
+    background-color: var(--light-bg);
     padding: 2rem 0;
     text-align: center;
+    margin-top: 4rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
 }

@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Sitio Web - Contacto</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Mi Empresa - Contacto</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <!-- Barra de navegación -->
     <nav class="navbar">
         <div class="container">
-            <a href="/" class="logo">Mi Sitio</a>
-            <ul class="nav-links">
+            <a href="/" class="logo">Mi Empresa</a>
+            <ul class="nav-menu">
                 <li><a href="/">Inicio</a></li>
                 <li><a href="/contacto/" class="active">Contacto</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Contenido principal -->
-    <main>
-        <section class="contact-section">
-            <div class="container">
-                <h1>Contáctanos</h1>
+    <!-- Sección de Contacto -->
+    <section class="contact">
+        <div class="container">
+            <h1>Contáctanos</h1>
+            <div class="contact-grid">
                 <div class="contact-form">
+                    <h2>Envíanos un mensaje</h2>
                     <form id="contact-form">
                         <div class="form-group">
                             <label for="name">Nombre:</label>
@@ -40,14 +41,20 @@
                         <button type="submit" class="btn">Enviar Mensaje</button>
                     </form>
                 </div>
+                <div class="contact-info">
+                    <h2>Información de Contacto</h2>
+                    <p><strong>Dirección:</strong> Calle Principal 123</p>
+                    <p><strong>Teléfono:</strong> (01) 234-5678</p>
+                    <p><strong>Email:</strong> info@miempresa.com</p>
+                </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Pie de página -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Mi Sitio. Todos los derechos reservados.</p>
+            <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>
